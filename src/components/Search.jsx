@@ -14,9 +14,14 @@ class Search extends React.Component {
     this.setState({
       query: event.target.value
     });
+    handleSearch(event);
   }
   
   handleSearch( event ) {
+    // calls search function (from App component) and passes query into it
+    // when search btn is clicked
+  
+    // search youtube with value inside our search
     this.props.search( this.state.query );
   }
 

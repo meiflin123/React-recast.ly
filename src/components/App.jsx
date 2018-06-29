@@ -1,10 +1,15 @@
 class App extends React.Component {
+
+  // initilize() {
+  // this.props.searchYouTube();
+  // }
+
   constructor(props) {
     super(props);
 
     this.state = {
-      videos: exampleVideoData,
-      video: exampleVideoData[0]
+      videos: [],
+      video: {}
     };
 
     this.changeVideo = this.changeVideo.bind(this);
@@ -12,6 +17,18 @@ class App extends React.Component {
   
   }
   
+  componentDidMount() {
+    var self = this;
+    
+    this.props.searchYouTube({}, function(videos) {
+      self.setState({
+        videos: videos,
+        video: videos[0]
+      });
+    });    
+  
+  }
+
   changeVideo( video ) {
     
     this.setState({
@@ -24,7 +41,7 @@ class App extends React.Component {
     
     var self = this;
   
-    searchYouTube({
+    this.props.searchYouTube({
       query: query
     }, function( videos ) {
     
