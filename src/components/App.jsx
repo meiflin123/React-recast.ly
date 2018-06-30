@@ -19,7 +19,6 @@ class App extends React.Component {
   
   componentDidMount() {
     var self = this;
-    
     this.props.searchYouTube({}, function(videos) {
       self.setState({
         videos: videos,

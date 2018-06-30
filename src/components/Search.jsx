@@ -14,7 +14,7 @@ class Search extends React.Component {
     this.setState({
       query: event.target.value
     });
-    handleSearch(event);
+    this.handleSearch(event);
   }
   
   handleSearch( event ) {
@@ -28,7 +28,7 @@ class Search extends React.Component {
   render() {
     return (
       <div className="search-bar form-inline">
-        <input className="form-control" type="text" val={this.state.query} onKeyUp={ this.handleSearchBar } />
+        <input className="form-control" type="text" val={this.state.query} onChange={ this.handleSearchBar } />
         <button className="btn hidden-sm-down" onClick={this.handleSearch} >
           <span className="glyphicon glyphicon-search"></span>
         </button>
