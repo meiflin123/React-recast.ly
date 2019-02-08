@@ -1,16 +1,16 @@
-var VideoListEntry = (props) => {
+const VideoListEntry = ({changeVideo, video}) => {
 
 
-  var onClick = function(event) {
-    props.changeVideo( props.video );
+  const onClick = () => {
+   changeVideo(video );
   };
   return (<div className="video-list-entry media">
     <div className="media-left media-middle">
-      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
+      <img className="media-object" src={video.snippet.thumbnails.default.url} alt={video.snippet.title} />
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title" onClick={ onClick }>{props.video.snippet.title}</div>
-      <div className="video-list-entry-detail">{props.video.snippet.description}</div>
+      <div className="video-list-entry-title" onClick={ onClick }>{video.snippet.title}</div>
+      <div className="video-list-entry-detail">{video.snippet.description}</div>
     </div>
   </div>);
   
