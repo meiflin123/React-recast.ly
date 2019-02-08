@@ -1,4 +1,4 @@
-# recast.ly
+# react videos
 This is a project I completed as a student at hackreactor. This project was worked on with a pair. we built a YouTube Video Player app using React. Here's how the app is organized:
 
 ![28292844-f256c5f6-6b05-11e7-8df2-f34061d2c2f0](https://user-images.githubusercontent.com/35877838/44246618-eb046b80-a193-11e8-9803-f46faeaa9d4d.png)
